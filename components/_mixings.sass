@@ -1,6 +1,13 @@
-@mixin flex($direccion, $justificacion, $alineacion, $gap)
+@mixin flex($justificacion: center, $alineacion: center, $gap: 0, $direccion: row)
   display: flex
-  flex-direction: $direccion
   justify-content: $justificacion
   align-items: $alineacion
   gap: $gap
+  flex-direction: $direccion
+
+@mixin estilos($color: $color-texto, $tamano-letra: 12px, $padding: 0, $margin: 0)
+  color: $color
+  font-size: $tamano-letra
+  padding: $padding
+  margin: $margin
+
