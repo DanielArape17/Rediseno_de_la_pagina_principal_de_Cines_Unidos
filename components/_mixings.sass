@@ -1,9 +1,9 @@
-@mixin flex($justificacion: center, $alineacion: center, $gap: 0, $direccion: row)
+@mixin flex($justify: center, $align: center, $gap: 0, $direction: row)
   display: flex
-  justify-content: $justificacion
-  align-items: $alineacion
+  justify-content: $justify
+  align-items: $align
   gap: $gap
-  flex-direction: $direccion
+  flex-direction: $direction
 
 @mixin estilos($color: $color-texto, $tamano-letra: 12px, $padding: 0, $margin: 0)
   color: $color
@@ -11,3 +11,8 @@
   padding: $padding
   margin: $margin
 
+@mixin grid($different: false, $grid-columns: 2)
+  display: grid
+  if $different  == true
+    grid-template-columns: $grid-columns
+  grid-template-columns: $grid-columns
