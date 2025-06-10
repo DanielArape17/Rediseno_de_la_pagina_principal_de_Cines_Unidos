@@ -1,0 +1,42 @@
+.pelicula-cartelera
+  @include flex(auto, auto, 0, column)
+  width: 256px
+  border: solid 1px #353942
+  border-radius: 12px
+
+.poster
+  @include flex(end, flex-start, 0, column)
+  width: 250px
+  height: 350px
+  background-image: url("http://www.impawards.com/2025/posters/ballerina_ver2.jpg")
+  background-size: cover
+  background-repeat: no-repeat
+  padding: 0 0 2px 6px 
+  border-radius: 12px 12px 0 0
+
+.descripcion-pelicula 
+  @include flex(auto, auto, 10px, column)
+  width: 256px
+  border-radius: 0 0 12px 12px
+  background-color: #10171f
+  animation: background-lights 5s ease infiniteE
+  background-size: 400% 400%
+
+  p
+    padding: 0 0 2px 6px
+    color: #d1d5db
+  
+  button
+    padding: 5px
+
+.descripcion-pelicula:hover
+  background-color: $color-acento
+  animation: background-lights 5s ease infinite
+
+@keyframes background-lights
+  0%
+    background-position: 50% 0%
+  50%
+    background-position: 50% 50%
+  100%
+    background-position: 50% 0%
