@@ -84,19 +84,22 @@ nav .nav-centro img {
 
 header {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+  align-items: baseline;
   gap: 0;
   flex-direction: row;
-  background-color: #101727;
   height: 100vh;
 }
-header .div-header {
+
+.div-header {
   display: grid;
   grid-template-columns: 30% 70%;
 }
-header .div-header .imagen {
-  width: 100px;
+.div-header img {
+  width: 100%;
+}
+.div-header .titulo {
+  background: linear-gradient(135deg, #1a0a27, #4a144a, #8a1f8a, #4a144a, #1a0a27);
 }
 
 .cartelera {
@@ -105,7 +108,7 @@ header .div-header .imagen {
   align-items: flex-start;
   gap: 10px;
   flex-direction: column;
-  padding: 0 10px;
+  padding: 10px 10px;
   height: 110vh;
 }
 

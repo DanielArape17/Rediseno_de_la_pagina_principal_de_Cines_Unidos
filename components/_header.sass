@@ -1,11 +1,10 @@
 header
-  @include flex
-  background-color: $color-background
+  @include flex(space-around, baseline)
   height: 100vh
 
-  .div-header
-    @include grid(false, 30% 70%)
-    
-
-    .imagen
-      width: 100px
+.div-header
+  @include grid(false, 30% 70%)
+  img
+    width: 100%
+  .titulo
+    background: linear-gradient(135deg, #1a0a27, #4a144a, #8a1f8a, #4a144a, #1a0a27)
