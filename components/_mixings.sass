@@ -11,8 +11,9 @@
   padding: $padding
   margin: $margin
 
-@mixin grid($different: false, $grid-columns: 2)
+@mixin grid($iguales: true, $grid-columns: 2)
   display: grid
-  if $different  == true
-    grid-template-columns: $grid-columns
+  @if $iguales == true
+    grid-template-columns: repeat($grid-columns, 1fr)
+  @else
   grid-template-columns: $grid-columns

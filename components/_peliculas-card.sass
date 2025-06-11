@@ -3,40 +3,65 @@
   width: 256px
   border: solid 1px #353942
   border-radius: 12px
+  transition: all 0.6s ease-in
+  flex-wrap: nowrap
+
+
+.pelicula-cartelera:hover
+  box-shadow: 0px 0px 12px 6px rgba(255,0,0,0.48)
 
 .poster
   @include flex(end, flex-start, 0, column)
-  width: 250px
   height: 350px
   background-image: url("http://www.impawards.com/2025/posters/ballerina_ver2.jpg")
   background-size: cover
   background-repeat: no-repeat
   padding: 0 0 2px 6px 
   border-radius: 12px 12px 0 0
+  h3
+    font-size: 28px
+  p
+    font-size: 14px
 
 .descripcion-pelicula 
-  @include flex(auto, auto, 10px, column)
-  width: 256px
   border-radius: 0 0 12px 12px
   background-color: #10171f
-  animation: background-lights 5s ease infiniteE
-  background-size: 400% 400%
 
-  p
-    padding: 0 0 2px 6px
-    color: #d1d5db
+  div
+    @include flex(center, auto, 10px, column)
+    p
+      font-size: 14px
+      color: #d1d5db
+      padding: 6px 0 0 11px
+    
+    button
+      padding: 7px
+      margin: 0 12px 10px
+      border: none
+      border-radius: 6px
+      color: $color-texto
+      background-color: $color-principal
+
+.pelicula-cartelera:hover
+  .descripcion-pelicula
+    background: linear-gradient(90deg,rgba(16, 23, 31, 1) 35%, rgba(255, 215, 0, 0.6) 50%, rgba(16, 23, 31, 1) 65%)
+    background-size: 200% 100%
+    animation: background-lights-right 1s ease-in-out
+    background-position: -50% -50%
+
+.pelicula-cartelera:not(hover)
+  .descripcion-pelicula
+    background: linear-gradient(90deg,rgba(16, 23, 31, 1) 35%, rgba(255, 215, 0, 0.6) 50%, rgba(16, 23, 31, 1) 65%)
+    background-size: 200% 100%
+    animation: background-lights-left 1s ease-in-out
+    background-position: 150% 100%
+
+/* Small devices (portrait tablets and large phones, 600px and up) 
+@media only screen and (max-width: 600px)
+  .pelicula-cartelera
+    width: 205px
   
-  button
-    padding: 5px
-
-.descripcion-pelicula:hover
-  background-color: $color-acento
-  animation: background-lights 5s ease infinite
-
-@keyframes background-lights
-  0%
-    background-position: 50% 0%
-  50%
-    background-position: 50% 50%
-  100%
-    background-position: 50% 0%
+  .poster
+    background-size: contain
+    height: 300px
+    border-radius: 12px
