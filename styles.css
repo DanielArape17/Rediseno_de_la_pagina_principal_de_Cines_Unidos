@@ -9,7 +9,6 @@
 body {
   background-color: #101727;
   color: #ffffff;
-  padding: 5px;
   font-family: "Roboto", sans-serif;
 }
 
@@ -24,6 +23,10 @@ a {
     display: none;
   }
 }
+/*Hacer un mixing de background
+ * background-image: url("http://www.impawards.com/2025/posters/ballerina_ver2.jpg")
+ * background-size: cover
+ * background-repeat: no-repeat */
 @keyframes background-lights-right {
   0% {
     background-position: 150% 0%;
@@ -84,32 +87,97 @@ nav .nav-centro img {
 
 header {
   display: flex;
-  justify-content: space-around;
-  align-items: baseline;
+  justify-content: center;
+  align-items: center;
   gap: 0;
   flex-direction: row;
-  height: 100vh;
+  min-height: 90vh;
+  background: linear-gradient(15deg, rgb(0, 0, 34) 0%, rgb(26, 10, 39) 45%, rgb(74, 20, 74) 50%, rgb(26, 10, 39) 55%, rgb(0, 0, 34) 100%);
 }
 
 .div-header {
   display: grid;
+  align-items: center;
+  justify-content: center;
   grid-template-columns: 30% 70%;
 }
 .div-header img {
   width: 100%;
 }
 .div-header .titulo {
-  background: linear-gradient(135deg, #1a0a27, #4a144a, #8a1f8a, #4a144a, #1a0a27);
-}
-
-.cartelera {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  gap: 14px;
+  flex-direction: column;
+}
+.div-header .titulo .div-botones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex-direction: row;
+}
+.div-header .titulo .div-botones button {
+  color: #ffffff;
+  font-size: large;
+  font-weight: 500;
+  border: 1px solid white;
+  border-radius: 6px;
+  background: linear-gradient(25deg, rgba(255, 255, 255, 0.5) 15%, rgba(240, 240, 240, 0.3) 35%, rgba(255, 255, 255, 0.1) 70%);
+  padding: 8px 7px;
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    /*Crear el mixing background-image */
+    background-image: url("./images/header-poster-ballerina.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-items: end;
+  }
+  .responsive-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    flex-direction: row;
+  }
+  .responsive-header .titulo {
+    max-width: 60%;
+    padding-bottom: 5px;
+  }
+  .responsive-header .titulo img {
+    max-width: 90%;
+  }
+  .responsive-header .imagen {
+    display: none;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 902px) {
+  .div-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    flex-direction: column-reverse;
+  }
+  .div-header .titulo {
+    position: absolute;
+    bottom: 0;
+  }
+  .div-header .titulo img {
+    max-width: 40%;
+  }
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
   flex-direction: column;
-  padding: 10px 10px;
   height: 110vh;
+  padding: 5px;
 }
 
 .pelicula-cartelera {
@@ -118,9 +186,9 @@ header {
   align-items: auto;
   gap: 0;
   flex-direction: column;
-  width: 256px;
   border: solid 1px #353942;
   border-radius: 12px;
+  width: 256px;
   transition: all 0.6s ease-in;
   flex-wrap: nowrap;
 }
@@ -135,12 +203,13 @@ header {
   align-items: flex-start;
   gap: 0;
   flex-direction: column;
+  border: none;
+  border-radius: 12px 12px 0 0;
   height: 350px;
   background-image: url("http://www.impawards.com/2025/posters/ballerina_ver2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 0 0 2px 6px;
-  border-radius: 12px 12px 0 0;
 }
 .poster h3 {
   font-size: 28px;
@@ -150,6 +219,7 @@ header {
 }
 
 .descripcion-pelicula {
+  border: none;
   border-radius: 0 0 12px 12px;
   background-color: #10171f;
 }
@@ -161,16 +231,16 @@ header {
   flex-direction: column;
 }
 .descripcion-pelicula div p {
-  font-size: 14px;
   color: #d1d5db;
+  font-size: 14px;
+  font-weight: 400;
   padding: 6px 0 0 11px;
 }
 .descripcion-pelicula div button {
-  padding: 7px;
-  margin: 0 12px 10px;
   border: none;
   border-radius: 6px;
-  color: #ffffff;
+  padding: 7px;
+  margin: 0 12px 10px;
   background-color: #ff0000;
 }
 
@@ -194,8 +264,13 @@ header {
     width: 205px;
   }
   .poster {
+    border: none;
+    border-radius: 12px;
     background-size: contain;
     height: 300px;
-    border-radius: 12px;
   }
+}
+.box {
+  border: solid 1px #353942;
+  border-radius: 12px;
 }/*# sourceMappingURL=styles.css.map */

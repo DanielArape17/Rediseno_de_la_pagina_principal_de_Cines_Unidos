@@ -1,10 +1,50 @@
 header
-  @include flex(space-around, baseline)
-  height: 100vh
+  @include flex(center, center)
+  min-height: 90vh
+  background: linear-gradient(15deg,rgba(0, 0, 34, 1) 0%, rgba(26, 10, 39, 1) 45%, rgba(74, 20, 74, 1) 50%, rgba(26, 10, 39, 1) 55%, rgba(0, 0, 34, 1) 100%)
 
 .div-header
   @include grid(false, 30% 70%)
   img
     width: 100%
+    
   .titulo
-    background: linear-gradient(135deg, #1a0a27, #4a144a, #8a1f8a, #4a144a, #1a0a27)
+    @include flex(center, center, 14px, column)
+    .div-botones
+      @include flex(center, center, 24px)
+    
+      button
+        @include letras($color-texto, large, 500)
+        @include bordes(1px solid white, 6px)
+        background: linear-gradient(25deg,rgba(255, 255, 255, 0.5) 15%, rgba(240, 240, 240, 0.3) 35%, rgba(255, 255, 255, 0.1) 70%)
+        padding: 8px 7px
+  
+@media only screen and (max-width: 600px)
+  header
+    /*Crear el mixing background-image
+    background-image: url("./images/header-poster-ballerina.png")
+    background-size: contain
+    background-repeat: no-repeat
+    align-items: end 
+  
+  .responsive-header
+    @include flex
+
+    .titulo
+      max-width: 60%
+      padding-bottom: 5px 
+      img
+        max-width: 90%
+    .imagen
+      display: none
+
+@media only screen and (min-width: 601px) and (max-width: 902px)
+  .div-header
+    @include flex(center, center, 0, column-reverse)
+
+    .titulo
+      position: absolute
+      bottom: 0
+      img
+        max-width: 40%
+

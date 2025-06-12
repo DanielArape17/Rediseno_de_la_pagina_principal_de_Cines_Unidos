@@ -1,19 +1,29 @@
-@mixin flex($justify: center, $align: center, $gap: 0, $direction: row)
+/*Hacer un mixing de background
+  background-image: url("http://www.impawards.com/2025/posters/ballerina_ver2.jpg")
+  background-size: cover
+  background-repeat: no-repeat
+  
+@mixin flex($justify-flex: center, $align-flex: center, $gap: 0, $direction: row)
   display: flex
-  justify-content: $justify
-  align-items: $align
+  justify-content: $justify-flex
+  align-items: $align-flex
   gap: $gap
   flex-direction: $direction
 
-@mixin estilos($color: $color-texto, $tamano-letra: 12px, $padding: 0, $margin: 0)
-  color: $color
-  font-size: $tamano-letra
-  padding: $padding
-  margin: $margin
-
-@mixin grid($iguales: true, $grid-columns: 2)
+@mixin grid($iguales: true, $grid-columns: 2, $aling-grid: center, $justify-grid: center)
   display: grid
+  align-items: $aling-grid
+  justify-content: $justify-grid
   @if $iguales == true
     grid-template-columns: repeat($grid-columns, 1fr)
   @else
   grid-template-columns: $grid-columns
+
+@mixin letras($color: $color-texto, $tamano-letra: 12px, $grosor-letra: 400)
+  color: $color
+  font-size: $tamano-letra
+  font-weight: $grosor-letra
+
+@mixin bordes($border: solid 1px #353942, $border-radius: 12px)
+  border: $border
+  border-radius: $border-radius
