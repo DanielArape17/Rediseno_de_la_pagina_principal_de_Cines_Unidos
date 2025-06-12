@@ -122,6 +122,7 @@ header {
   color: #ffffff;
   font-size: large;
   font-weight: 500;
+  line-height: normal;
   border: 1px solid white;
   border-radius: 6px;
   background: linear-gradient(25deg, rgba(255, 255, 255, 0.5) 15%, rgba(240, 240, 240, 0.3) 35%, rgba(255, 255, 255, 0.1) 70%);
@@ -176,7 +177,7 @@ section {
   align-items: center;
   gap: 10px;
   flex-direction: column;
-  height: 110vh;
+  min-height: 110vh;
   padding: 5px;
 }
 
@@ -234,6 +235,7 @@ section {
   color: #d1d5db;
   font-size: 14px;
   font-weight: 400;
+  line-height: normal;
   padding: 6px 0 0 11px;
 }
 .descripcion-pelicula div button {
@@ -270,7 +272,73 @@ section {
     height: 300px;
   }
 }
+.div-boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
 .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
   border: solid 1px #353942;
   border-radius: 12px;
+  padding: 24px 30px;
+  background: linear-gradient(90deg, rgba(31, 41, 55, 0.5019607843) 0%, rgba(16, 21, 27, 0.4) 50%, rgba(31, 41, 55, 0.5019607843) 100%);
+}
+.box h2 {
+  color: none;
+  font-size: 36px;
+  font-weight: 0;
+  line-height: 40px;
+}
+.box h3 {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+}
+.box div {
+  display: flex;
+  justify-content: center;
+  align-items: start-flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.box div p {
+  color: #d1d5db;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.box div li {
+  color: #ffd900;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+@media only screen and (min-width: 768px) {
+  .div-boxes {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 2;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .div-boxes {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 4;
+  }
 }/*# sourceMappingURL=styles.css.map */

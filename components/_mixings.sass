@@ -19,10 +19,11 @@
   @else
   grid-template-columns: $grid-columns
 
-@mixin letras($color: $color-texto, $tamano-letra: 12px, $grosor-letra: 400)
+@mixin letras($color: $color-texto, $tamano-letra: 12px, $grosor-letra: 400, $linea: normal)
   color: $color
   font-size: $tamano-letra
   font-weight: $grosor-letra
+  line-height: $linea
 
 @mixin bordes($border: solid 1px #353942, $border-radius: 12px)
   border: $border
