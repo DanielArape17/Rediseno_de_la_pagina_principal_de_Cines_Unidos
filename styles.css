@@ -210,6 +210,12 @@ section p {
 .contenido-club-section .div-form {
   padding: 0 20px;
 }
+.contenido-club-section .div-form h3 {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+}
 .contenido-club-section form {
   display: flex;
   justify-content: center;
@@ -242,7 +248,7 @@ section p {
   background-color: #ff0000;
   width: 100%;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
   .contenido-club-section {
     display: grid;
     align-items: center;
@@ -406,13 +412,9 @@ section p {
   box-shadow: 0px 0px 12px 6px rgba(255, 0, 0, 0.48);
 }
 
-.box-efectos:not(hover) {
-  background: linear-gradient(90deg, rgba(31, 41, 55, 0.5019607843) 35%, rgba(255, 215, 0, 0.6) 50%, rgba(31, 41, 55, 0.5019607843) 65%);
-  background-size: 200% 100%;
-  animation: background-lights-left 1s ease-in-out;
-  background-position: 150% 100%;
-}
-
+/* No se
+ * .box-efectos:not(hover)
+ *  @include background-lights(false, #1F293780) */
 /*Responsive */
 @media only screen and (min-width: 768px) {
   .div-boxes {
@@ -424,7 +426,7 @@ section p {
   }
 }
 @media only screen and (min-width: 1100px) {
-  #Experiencia .div-boxes {
+  #experiencia .div-boxes {
     display: grid;
     align-items: center;
     justify-content: center;

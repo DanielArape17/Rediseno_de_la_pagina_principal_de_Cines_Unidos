@@ -39,4 +39,9 @@
     background-size: 200% 100%
     animation: background-lights-left 1s ease-in-out
     background-position: 150% 100%
+  
+@mixin box-styles($box-background: $box-background-gray, $box-padding: 24px 30px)
+  @include bordes
+  padding: $box-padding
+  background: $box-background
     

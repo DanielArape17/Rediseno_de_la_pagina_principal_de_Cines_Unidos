@@ -3,6 +3,8 @@
 
   .div-form
     padding: 0 20px
+    h3
+      @include letras($color-texto, 32px, 600, 40px)
   
   form
     @include flex(center, flex-start, 5px, column)
@@ -21,9 +23,8 @@
       margin-top: 8px
       background-color: $color-principal
       width: 100%
-
   /*Responsive
-  @media only screen and (min-width: 768px)
-      @include grid(true)
+  @media only screen and (min-width: 992px)
+    @include grid(true)
 
 
