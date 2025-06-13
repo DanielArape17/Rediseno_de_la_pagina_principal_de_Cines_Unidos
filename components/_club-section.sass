@@ -6,18 +6,24 @@
   
   form
     @include flex(center, flex-start, 5px, column)
+    width: 100%
     input
       @include letras(#c3c8d3, 16px, 400, 20px)
       @include bordes(solid 1px #353942, 6px)
       background-color: #37415180
-      padding: 8px 12px
+      padding: 8px 0px
+      width: 100%
     button
       @include bordes(none, 6px)
       @include letras($color-texto, 14px, 600)
       align-self: center
-      width: 100%
       padding: 8px 0
       margin-top: 8px
       background-color: $color-principal
+      width: 100%
+
+  /*Responsive
+  @media only screen and (min-width: 768px)
+      @include grid(true)
 
 

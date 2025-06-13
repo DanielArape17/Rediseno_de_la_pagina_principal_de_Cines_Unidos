@@ -205,6 +205,7 @@ section p {
   align-items: center;
   gap: 20px;
   flex-direction: column;
+  /*Responsive */
 }
 .contenido-club-section .div-form {
   padding: 0 20px;
@@ -215,6 +216,7 @@ section p {
   align-items: flex-start;
   gap: 5px;
   flex-direction: column;
+  width: 100%;
 }
 .contenido-club-section form input {
   color: #c3c8d3;
@@ -224,7 +226,8 @@ section p {
   border: solid 1px #353942;
   border-radius: 6px;
   background-color: rgba(55, 65, 81, 0.5019607843);
-  padding: 8px 12px;
+  padding: 8px 0px;
+  width: 100%;
 }
 .contenido-club-section form button {
   border: none;
@@ -234,10 +237,19 @@ section p {
   font-weight: 600;
   line-height: normal;
   align-self: center;
-  width: 100%;
   padding: 8px 0;
   margin-top: 8px;
   background-color: #ff0000;
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .contenido-club-section {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 2;
+  }
 }
 
 .pelicula-cartelera {
@@ -412,7 +424,7 @@ section p {
   }
 }
 @media only screen and (min-width: 1100px) {
-  .div-boxes {
+  #Experiencia .div-boxes {
     display: grid;
     align-items: center;
     justify-content: center;
