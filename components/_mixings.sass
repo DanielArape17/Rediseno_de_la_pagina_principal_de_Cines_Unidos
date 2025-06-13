@@ -28,3 +28,15 @@
 @mixin bordes($border: solid 1px #353942, $border-radius: 12px)
   border: $border
   border-radius: $border-radius
+
+@mixin background-lights($right: true, $background-color-light: rgba(16, 23, 31, 1))
+  background: linear-gradient(90deg, $background-color-light 35%, rgba(255, 215, 0, 0.6) 50%, $background-color-light 65%)
+  @if $right == true
+    background-size: 200% 100%
+    animation: background-lights-right 1s ease-in-out
+    background-position: -50% -50%
+  @else 
+    background-size: 200% 100%
+    animation: background-lights-left 1s ease-in-out
+    background-position: 150% 100%
+    

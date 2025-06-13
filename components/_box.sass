@@ -18,6 +18,14 @@
     li
       @include letras($color-acento, 15px, 500, 28px)
 
+.box-efectos:hover
+    @include background-lights(true, #1F293780)
+    box-shadow: $color-box-shadow-hover
+
+.box-efectos:not(hover)
+  @include background-lights(false, #1F293780)
+
+/*Responsive
 @media only screen and (min-width: 768px)
   .div-boxes
     @include grid(true)

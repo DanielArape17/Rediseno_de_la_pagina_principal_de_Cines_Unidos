@@ -1,4 +1,13 @@
 section
-  @include flex(center, center, 10px, column)
+  @include flex(center, center, 20px, column)
   min-height: 110vh
   padding: 5px
+
+  h2
+    @include letras($color-texto, 36px, 700, 40px)
+  p
+    @include letras($color-texto, 20px, 300, 28px)
+
+.alinear-texto
+  text-align: center
+  width: 60%
