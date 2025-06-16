@@ -1,0 +1,117 @@
+.contenido-snack-bar-section
+  @include flex(space-between, center, 20px, column)
+  padding: 0 10px
+  width: 97%
+  flex-direction: column-reverse
+
+.div-opciones-snacks
+  display: none
+
+.opciones-snacks
+  @include flex
+  @include bordes(solid 1px #353942, 6px)
+  background-color: #1a232c
+  padding: 6px 6px 10px
+  width: 97%
+
+  .snacks
+    @include flex(center, center, 4px, column)
+    @include bordes(none, 6px)
+    white-space: nowrap
+    padding: 8px
+    cursor: pointer
+    width: 100%
+  p
+    @include letras($color-texto, 14px, 500, 20px)
+  .snack-select
+    background: #ca8a04
+    box-shadow: 0px 4px 2px 0px rgba(241,197,41,0.78)
+    p 
+      color: black
+
+.imagen-snacks
+  @include flex(end, flex-start, 4px, column)
+  @include bordes(none, 6px)
+  background-image: url("https://www.latinol.com/media/contenido/images/palomitas-cine.jpg")
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  width: 97%
+  min-height: 60vh
+  box-shadow: $color-box-shadow-hover
+  padding: 0 0 12px 12px
+  .titulo-imagen-snacks
+    @include flex(flex-start, center, 6px)
+    div
+      @include flex
+      padding: 12px
+      background: #ca8a04
+      border-radius: 50%
+    h3
+      @include letras($color-texto, 28px, 700, 44px)
+
+.menu
+  width: 97%
+  .div-opcion-menu
+    @include grid
+    padding-left: 6px
+    gap: 6px
+    .opcion-menu
+      @include bordes(solid 1px #ca8a04, 6px)
+      background-color: rgb(26, 15, 13, 0.9)
+      padding: 12px
+      cursor: pointer
+      div
+        @include flex(space-between, center,)
+        @include letras($color-texto, 18px, 600, 28px)
+        h4
+          color: $color-acento
+      p
+        @include letras(#c3c8d3, 14px, 400, 20px)
+.menu-descripcion-flex
+  display: none
+
+/*Responsive
+@media only screen and (min-width: 768px)
+  .menu-descripcion-flex
+    display: flex
+
+@media only screen and (min-width: 992px)
+  .contenido-snack-bar-section
+    @include grid(false, 70% 30%)
+    .responsive
+      display: none
+  
+  .responsive-snacks
+    display: none
+
+  .div-opciones-snacks
+    @include flex(space-evenly, center, 5px, column)
+    @include bordes
+    background-color: #13161d
+    height: 100%
+    h3
+      color: $color-acento
+    p
+      @include letras($color-texto, 14px, 600)
+  
+  
+  .opciones-snacks
+    flex-direction: column
+    background-color: transparent
+    border: none
+    gap: 24px
+    color: $color-acento
+    .snacks
+      @include flex(flex-start, center, 4px)
+      width: 90%
+      background-color: #242c37
+      box-shadow: none
+      border: solid 1px #67717f
+      padding: 10px
+      border-radius: 8px
+    .snack-select
+      background: #ca8a04
+
+  .imagen-snacks
+    height: 70vh

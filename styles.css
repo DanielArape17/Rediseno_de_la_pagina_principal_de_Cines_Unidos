@@ -178,7 +178,7 @@ section {
   align-items: center;
   gap: 20px;
   flex-direction: column;
-  min-height: 110vh;
+  min-height: 120vh;
   padding: 5px;
 }
 section h2 {
@@ -196,7 +196,7 @@ section p {
 
 .alinear-texto {
   text-align: center;
-  width: 60%;
+  width: 80%;
 }
 
 .contenido-club-section {
@@ -429,6 +429,336 @@ section p {
   #experiencia .div-boxes {
     display: grid;
     align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 4;
+  }
+}
+
+.contenido-snack-bar-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+  padding: 0 10px;
+  width: 97%;
+  flex-direction: column-reverse;
+}
+
+.div-opciones-snacks {
+  display: none;
+}
+
+.opciones-snacks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-direction: row;
+  border: solid 1px #353942;
+  border-radius: 6px;
+  background-color: #1a232c;
+  padding: 6px 6px 10px;
+  width: 97%;
+}
+.opciones-snacks .snacks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  flex-direction: column;
+  border: none;
+  border-radius: 6px;
+  white-space: nowrap;
+  padding: 8px;
+  cursor: pointer;
+  width: 100%;
+}
+.opciones-snacks p {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.opciones-snacks .snack-select {
+  background: #ca8a04;
+  box-shadow: 0px 4px 2px 0px rgba(241, 197, 41, 0.78);
+}
+.opciones-snacks .snack-select p {
+  color: black;
+}
+
+.imagen-snacks {
+  display: flex;
+  justify-content: end;
+  align-items: flex-start;
+  gap: 4px;
+  flex-direction: column;
+  border: none;
+  border-radius: 6px;
+  background-image: url("https://www.latinol.com/media/contenido/images/palomitas-cine.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 97%;
+  min-height: 60vh;
+  box-shadow: 0px 0px 12px 6px rgba(255, 0, 0, 0.48);
+  padding: 0 0 12px 12px;
+}
+.imagen-snacks .titulo-imagen-snacks {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 6px;
+  flex-direction: row;
+}
+.imagen-snacks .titulo-imagen-snacks div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-direction: row;
+  padding: 12px;
+  background: #ca8a04;
+  border-radius: 50%;
+}
+.imagen-snacks .titulo-imagen-snacks h3 {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 44px;
+}
+
+.menu {
+  width: 97%;
+}
+.menu .div-opcion-menu {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 2;
+  padding-left: 6px;
+  gap: 6px;
+}
+.menu .div-opcion-menu .opcion-menu {
+  border: solid 1px #ca8a04;
+  border-radius: 6px;
+  background-color: rgba(26, 15, 13, 0.9);
+  padding: 12px;
+  cursor: pointer;
+}
+.menu .div-opcion-menu .opcion-menu div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  flex-direction: row;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+}
+.menu .div-opcion-menu .opcion-menu div h4 {
+  color: #ffd900;
+}
+.menu .div-opcion-menu .opcion-menu p {
+  color: #c3c8d3;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.menu-descripcion-flex {
+  display: none;
+}
+
+/*Responsive */
+@media only screen and (min-width: 768px) {
+  .menu-descripcion-flex {
+    display: flex;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .contenido-snack-bar-section {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 70% 30%;
+  }
+  .contenido-snack-bar-section .responsive {
+    display: none;
+  }
+  .responsive-snacks {
+    display: none;
+  }
+  .div-opciones-snacks {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5px;
+    flex-direction: column;
+    border: solid 1px #353942;
+    border-radius: 12px;
+    background-color: #13161d;
+    height: 100%;
+  }
+  .div-opciones-snacks h3 {
+    color: #ffd900;
+  }
+  .div-opciones-snacks p {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .opciones-snacks {
+    flex-direction: column;
+    background-color: transparent;
+    border: none;
+    gap: 24px;
+    color: #ffd900;
+  }
+  .opciones-snacks .snacks {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4px;
+    flex-direction: row;
+    width: 90%;
+    background-color: #242c37;
+    box-shadow: none;
+    border: solid 1px #67717f;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  .opciones-snacks .snack-select {
+    background: #ca8a04;
+  }
+  .imagen-snacks {
+    height: 70vh;
+  }
+}
+footer {
+  border-top: solid 1px #8b3232;
+  /*Responsive */
+}
+footer .info {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5px;
+  flex-direction: column;
+  padding: 20px 20px;
+}
+footer .info div {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5px;
+  flex-direction: column;
+}
+footer .info div p {
+  color: #c3c8d3;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+footer .info div a {
+  color: #c3c8d3;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+footer .info div h4 {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 30px;
+}
+footer .info div form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  flex-direction: column;
+  width: 100%;
+}
+footer .info div form input {
+  color: #c3c8d3;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  border: solid 1px #353942;
+  border-radius: 6px;
+  background-color: rgba(55, 65, 81, 0.5019607843);
+  padding: 8px 0px;
+  width: 100%;
+}
+footer .info div form button {
+  border: none;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: normal;
+  align-self: center;
+  padding: 8px 0;
+  margin-top: 8px;
+  background-color: #ff0000;
+  width: 100%;
+}
+footer .derechos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+  margin-top: 15px;
+  border-top: solid 1px #353942;
+  padding: 20px 20px;
+}
+footer .derechos div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-direction: row;
+}
+footer .derechos p {
+  color: #c3c8d3;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+}
+footer .derechos a {
+  color: #c3c8d3;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+}
+@media only screen and (min-width: 768px) {
+  footer .info {
+    display: grid;
+    align-items: flex-start;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 2;
+    gap: 10px;
+  }
+  footer .derechos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    flex-direction: row;
+  }
+}
+@media only screen and (min-width: 992px) {
+  footer .info {
+    display: grid;
+    align-items: flex-start;
     justify-content: center;
     grid-template-columns: repeat(4, 1fr);
     grid-template-columns: 4;
