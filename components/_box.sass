@@ -6,7 +6,7 @@
   @include flex(center, center, 20px, column)
   @include bordes
   padding: 24px 30px
-  background: linear-gradient(90deg, #1F293780 0%, rgba(16, 21, 27, 0.4) 50%, #1F293780 100%)
+
   h2
     @include letras(none, 36px, 0, 40px)
   h3
@@ -18,9 +18,21 @@
     li
       @include letras($color-acento, 15px, 500, 28px)
 
+/*opciones del background de box
+.box-background-gray 
+  background: linear-gradient(90deg, #1F293780 0%, rgba(16, 21, 27, 0.4) 50%, #1F293780 100%)
+
 .box-efectos:hover
   @include background-lights(true, #1F293780)
   box-shadow: $color-box-shadow-hover
+
+.box-background-red
+  background-color: rgb(21, 21, 29, 0.8)
+
+.box-efectos-red:hover
+  @include background-lights(true, rgb(21, 21, 29, 0.8))
+  box-shadow: $color-box-shadow-hover
+
 /* No se
   .box-efectos:not(hover)
     @include background-lights(false, #1F293780)
