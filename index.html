@@ -8,22 +8,34 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
+  <!--Efecto de vidrio-->
+  <div class="vidrio"></div>
+
   <!--NAVBAR-->
   <nav>
     <!--NavBar Izquierda-->
     <div class="nav-izquierda">
-      <i class="fa-solid fa-bars"></i>
+      <img src="https://www.cinesunidos.com/logo/complete-logo-red.png" alt="Logo de Cines Unidos">
     </div>
 
     <!--NavBar Centro-->
-    <div class="nav-centro">
-      <img src="https://www.cinesunidos.com/logo/complete-logo-red.png" alt="Logo de Cines Unidos">
+    <div class="nav-centro responsive-pc">
+      <a href="">Cartelera</a>
+      <a href="">Experiencia</a>
+      <a href="">Club</a>
+      <a href="">Snacks</a>
+      <a href="">Promociones</a>
     </div>
 
     <!--NavBar Derecha-->
     <div class="nav-derecha">
-      <i class="fa-solid fa-location-dot"></i>
-      <i class="fa-solid fa-ticket"></i>
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <i class="fa-solid fa-location-dot responsive-tablet"></i>
+      <button>
+        <i class="fa-solid fa-ticket"></i>
+        <p>Boletos</p>
+      </button>
+      <i class="fa-solid fa-bars responsive-pc"></i>
     </div>
   </nav>
 
@@ -55,6 +67,94 @@
       <!--Carousel-->
       <div class="carousel">
         <!--Pelicula Individual-->
+        <div class="pelicula-cartelera">
+          <a href="">
+            <!--Poster-->
+            <div class="poster">
+                <h3>Ballerina</h3>
+                <p>Acción/Suspenso · 2h 05min</p>
+            </div>
+            <!--Descripcion-->
+            <div class="descripcion-pelicula">
+              <div>
+                <p>
+                  Eve Macarro, una asesina entrenada por la Ruska Roma, 
+                  busca venganza por la muerte de su padre y descubre secretos 
+                  sobre su pasado.
+                </p>
+                <button>
+                  Comprar Boleto
+                </button>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="pelicula-cartelera">
+          <a href="">
+            <!--Poster-->
+            <div class="poster">
+                <h3>Ballerina</h3>
+                <p>Acción/Suspenso · 2h 05min</p>
+            </div>
+            <!--Descripcion-->
+            <div class="descripcion-pelicula">
+              <div>
+                <p>
+                  Eve Macarro, una asesina entrenada por la Ruska Roma, 
+                  busca venganza por la muerte de su padre y descubre secretos 
+                  sobre su pasado.
+                </p>
+                <button>
+                  Comprar Boleto
+                </button>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="pelicula-cartelera">
+          <a href="">
+            <!--Poster-->
+            <div class="poster">
+                <h3>Ballerina</h3>
+                <p>Acción/Suspenso · 2h 05min</p>
+            </div>
+            <!--Descripcion-->
+            <div class="descripcion-pelicula">
+              <div>
+                <p>
+                  Eve Macarro, una asesina entrenada por la Ruska Roma, 
+                  busca venganza por la muerte de su padre y descubre secretos 
+                  sobre su pasado.
+                </p>
+                <button>
+                  Comprar Boleto
+                </button>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="pelicula-cartelera">
+          <a href="">
+            <!--Poster-->
+            <div class="poster">
+                <h3>Ballerina</h3>
+                <p>Acción/Suspenso · 2h 05min</p>
+            </div>
+            <!--Descripcion-->
+            <div class="descripcion-pelicula">
+              <div>
+                <p>
+                  Eve Macarro, una asesina entrenada por la Ruska Roma, 
+                  busca venganza por la muerte de su padre y descubre secretos 
+                  sobre su pasado.
+                </p>
+                <button>
+                  Comprar Boleto
+                </button>
+              </div>
+            </div>
+          </a>
+        </div>
         <div class="pelicula-cartelera">
           <a href="">
             <!--Poster-->
@@ -110,7 +210,7 @@
       </div>
     </section>
     <!--Experiencia-->
-    <section class="grid-de-cuatro">
+    <section class="grid-de-cuatro experiencia">
       <!--Titulo de Seccion-->
       <div class="alinear-texto">
         <h2>Nuestras Experiencias</h2>
@@ -120,6 +220,18 @@
       <div class="div-boxes">
         <!--Boxes-->
         <div class="box box-efectos box-background-gray ">
+          <h2>🎬</h2>
+          <h3>4DX Experience</h3>
+          <div>
+            <p>Siente cada momento con movimiento, viento, agua y aromas sincronizados con la película.</p>
+            <ul>
+              <li>Asientos móviles</li>
+              <li>Efectos ambientales</li>
+              <li>Experiencia inmersiva</li>
+            </ul>
+          </div>
+        </div>
+        <div class="box box-efectos box-background-gray ">
           <h2>🔊</h2>
           <h3>Dolby Cinema</h3>
           <div>
@@ -132,38 +244,26 @@
           </div>
         </div>
         <div class="box box-efectos box-background-gray ">
-          <h2>🎬</h2>
-          <h3>Dolby Cinema</h3>
+          <h2>📽️</h2>
+          <h3>IMAX</h3>
           <div>
-            <p>Audio e imagen de calidad superior con tecnología Dolby Atmos y Dolby Vision.</p>
+            <p>La pantalla más grande y el sonido más potente para una experiencia cinematográfica única.</p>
             <ul>
-              <li>Audio envolvente</li>
-              <li>HDR mejorado</li>
-              <li>Colores vibrantes</li>
+              <li>Pantalla gigante</li>
+              <li>Sonido cristalino</li>
+              <li>Resolución 4K</li>
             </ul>
           </div>
         </div>
         <div class="box box-efectos box-background-gray ">
-          <h2>🎬</h2>
-          <h3>Dolby Cinema</h3>
+          <h2>👑</h2>
+          <h3>VIP Premium</h3>
           <div>
-            <p>Audio e imagen de calidad superior con tecnología Dolby Atmos y Dolby Vision.</p>
+            <p>Asientos reclinables de lujo con servicio a la butaca y snacks gourmet.</p>
             <ul>
-              <li>Audio envolvente</li>
-              <li>HDR mejorado</li>
-              <li>Colores vibrantes</li>
-            </ul>
-          </div>
-        </div>
-        <div class="box box-efectos box-background-gray ">
-          <h2>🔊</h2>
-          <h3>Dolby Cinema</h3>
-          <div>
-            <p>Audio e imagen de calidad superior con tecnología Dolby Atmos y Dolby Vision.</p>
-            <ul>
-              <li>Audio envolvente</li>
-              <li>HDR mejorado</li>
-              <li>Colores vibrantes</li>
+              <li>Asientos de cuero</li>
+              <li>Servicio personal</li>
+              <li>Menú premium</li>
             </ul>
           </div>
         </div>
@@ -192,19 +292,19 @@
             <p>Hasta 30% de descuento en boletos y snacks</p>
           </div>
           <div class="box box-efectos-red box-background-red">
-            <h2>🎫</h2>
-            <h3>Descuentos Exclusivos</h3>
-            <p>Hasta 30% de descuento en boletos y snacks</p>
+            <h2>🍿</h2>
+            <h3>Snacks Gratis</h3>
+            <p>Palomitas y bebida gratis en tu cumpleaños</p>
           </div>
           <div class="box box-efectos-red box-background-red">
-            <h2>🎫</h2>
-            <h3>Descuentos Exclusivos</h3>
-            <p>Hasta 30% de descuento en boletos y snacks</p>
+            <h2>⚡</h2>
+            <h3>Acceso Prioritario</h3>
+            <p>Compra boletos antes que nadie</p>
           </div>
           <div class="box box-efectos-red box-background-red">
-            <h2>🎫</h2>
-            <h3>Descuentos Exclusivos</h3>
-            <p>Hasta 30% de descuento en boletos y snacks</p>
+            <h2>🎁</h2>
+            <h3>Regalos Especiales</h3>
+            <p>Merchandising exclusivo y sorpresas</p>
           </div>
         </div>
         <!--Form-->
@@ -259,24 +359,24 @@
               </div>
               <div class="opcion-menu">
                 <div>
-                  <h4>Palomitas Clásicas</h4>
-                  <span>$8.99</span>
+                  <h4>Palomitas Caramelo</h4>
+                  <span>$10.99</span>
                 </div>
-                <p class="menu-descripcion-flex">Perfectas para acompañar tu película favorita</p>
+                <p class="menu-descripcion-flex">Dulces y crujientes con caramelo artesanal</p>
               </div>
               <div class="opcion-menu">
                 <div>
-                  <h4>Palomitas Clásicas</h4>
-                  <span>$8.99</span>
+                  <h4>Palomitas Queso</h4>
+                  <span>$10.99</span>
                 </div>
-                <p class="menu-descripcion-flex">Perfectas para acompañar tu película favorita</p>
+                <p class="menu-descripcion-flex">Sabor intenso a queso cheddar premium</p>
               </div>
               <div class="opcion-menu">
                 <div>
-                  <h4>Palomitas Clásicas</h4>
-                  <span>$8.99</span>
+                  <h4>Palomitas Chocolate</h4>
+                  <span>$11.99</span>
                 </div>
-                <p class="menu-descripcion-flex">Perfectas para acompañar tu película favorita</p>
+                <p class="menu-descripcion-flex">Cubiertas con chocolate belga de alta calidad</p>
               </div>
             </div>
           </div>
@@ -344,24 +444,24 @@
         </div>
         <div class="box box-efectos-red box-background-red">
           <h2>👨‍👩‍👧‍👦</h2>
-          <h3>Martes de Estudiantes</h3>
-          <p>50% de descuento presentando credencial estudiantil válida</p>
-          <span>Todos los martes</span>
-          <button>Mas Info</button>
+          <h3>Miércoles Familiar</h3>
+          <p>4 boletos por el precio de 3 + palomitas gratis</p>
+          <span>Todos los miércoles</span>
+          <button>Reserva</button>
         </div>
         <div class="box box-efectos-red box-background-red">
           <h2>🌙</h2>
-          <h3>Martes de Estudiantes</h3>
-          <p>50% de descuento presentando credencial estudiantil válida</p>
-          <span>Todos los martes</span>
-          <button>Mas Info</button>
+          <h3>Noches Premium</h3>
+          <p>Funciones después de las 9pm con descuento especial</p>
+          <span>Viernes y sábados</span>
+          <button>Ver Horarios</button>
         </div>
         <div class="box box-efectos-red box-background-red">
           <h2>⭐</h2>
-          <h3>Martes de Estudiantes</h3>
-          <p>50% de descuento presentando credencial estudiantil válida</p>
-          <span>Todos los martes</span>
-          <button>Mas Info</button>
+          <h3>Club VIP</h3>
+          <p>Acceso anticipado a estrenos exclusivos</p>
+          <span>Membresía anual</span>
+          <button>Únete</button>
         </div>
       </div>
     </section>
@@ -387,21 +487,21 @@
         </div>
         <div class="box box-efectos-red box-background-red">
           <h3>Patrocinio de Salas</h3>
-          <p>Muestra tu marca antes de las funciones</p>
+          <p>Nombra una sala con tu marca</p>
           <ul>
-            <li>Alcance masivo</li>
-            <li>Segmentación por horario</li>
-            <li>Formatos flexibles</li>
+            <li>Exposición permanente</li>
+            <li>Branding personalizado</li>
+            <li>Eventos exclusivos</li>
           </ul>
           <button>Solicitar Información</button>
         </div>
         <div class="box box-efectos-red box-background-red">
           <h3>Eventos Corporativos</h3>
-          <p>Muestra tu marca antes de las funciones</p>
+          <p>Renta nuestras instalaciones para eventos</p>
           <ul>
-            <li>Alcance masivo</li>
-            <li>Segmentación por horario</li>
-            <li>Formatos flexibles</li>
+            <li>Salas privadas</li>
+            <li>Catering incluido</li>
+            <li>Tecnología premium</li>
           </ul>
           <button>Solicitar Información</button>
         </div>

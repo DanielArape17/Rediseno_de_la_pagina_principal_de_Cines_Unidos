@@ -1,6 +1,11 @@
 .contenido-club-section
   @include flex(center, center, 20px, column)
 
+  .div-boxes
+    .box
+      @include flex(center, flex-start, 15px, column)
+      width: 80%
+
   .div-form
     padding: 0 20px
     h3
@@ -15,6 +20,10 @@
       background-color: #37415180
       padding: 8px 0px
       width: 100%
+    
+    input:focus
+      outline: thick double rgba(255, 0, 0, 0.4)
+
     button
       @include bordes(none, 6px)
       @include letras($color-texto, 14px, 600)
@@ -22,7 +31,10 @@
       padding: 8px 0
       margin-top: 8px
       background-color: $color-principal
+      box-shadow: rgba(255, 0, 0, 0.4) 0px 0px 20px, rgba(255, 0, 0, 0.3) 0px 0px 40px, rgba(255, 0, 0, 0.2) 0px 0px 60px
       width: 100%
+    small
+      @include letras(#c3c8d3, 14px, 400, 18px)
   /*Responsive
   @media only screen and (min-width: 992px)
     @include grid(true)

@@ -1,5 +1,14 @@
 .oportunidades-comerciales
   .div-boxes
-    
     .box
-      align-content: flex-start
+      @include flex(center, flex-start, 20px, column)
+      h3
+        @include letras($color-acento, 20px, 600, 28px)
+        margin-bottom: -15px
+      ul
+        padding-left: 18px
+        li
+          @include letras($color-texto, 14px, 400, 20px)
+        li::marker
+          color: $color-principal
+          font-size: 18px

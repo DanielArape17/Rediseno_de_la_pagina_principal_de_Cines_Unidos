@@ -1,16 +1,73 @@
+/*Fixed
+.vidrio 
+  background: rgba(15, 15, 15, 0.8)
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)
+  backdrop-filter: blur(48px)
+  -webkit-backdrop-filter: blur(48px)
+  position: fixed
+  top: 0
+  width: 100%
+  height: 56px
+  z-index: 1
+
+  
 nav
   @include flex(space-between)
   height: 56px
+  padding: 0 5px
+  position: sticky
+  top: 0
+  z-index: 2
+
+  .responsive-pc
+    display: none
+
+  .responsive-tablet
+    display: none
 
   i
     font-size: 20px
     margin: 0 8px
+    cursor: pointer
 
   .nav-izquierda
-    @include flex(center, center, 10px)
-
-  .nav-centro
     width: 250px
     img
       width: 100%
       height: 100%
+      cursor: pointer
+      
+  .nav-derecha
+    @include flex(end, center, 5px)
+    button
+      @include flex
+      @include bordes(none, 6px)
+      @include letras($color-texto, 14px, 700, 20px)
+      align-self: center
+      padding: 6px
+      background-color: $color-principal
+  
+  /*Responsive
+  @media only screen and (min-width: 768px)
+    .responsive-tablet
+      display: flex
+      color: $color-principal
+
+  @media only screen and (min-width: 992px)
+    nav
+      @include grid(true, 3)
+      
+    .responsive-pc
+      display: flex
+    
+    .nav-centro
+      gap: 30px
+      a
+        @include letras($color-texto, 18px, 500, 28px)
+      a:hover
+        color: $color-acento
+        
+
+    .nav-derecha
+      .responsive-pc
+        display: none

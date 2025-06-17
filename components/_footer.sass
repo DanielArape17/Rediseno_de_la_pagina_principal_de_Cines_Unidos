@@ -20,6 +20,8 @@ footer
           background-color: #37415180
           padding: 8px 0px
           width: 100%
+        input:focus
+          outline: thick double rgba(255, 0, 0, 0.4)
         button
           @include bordes(none, 6px)
           @include letras($color-texto, 14px, 600)
@@ -27,6 +29,7 @@ footer
           padding: 8px 0
           margin-top: 8px
           background-color: $color-principal
+          box-shadow: 0 0 10px 6px rgb(255, 0, 0, 0.5)
           width: 100%
   
   .derechos
