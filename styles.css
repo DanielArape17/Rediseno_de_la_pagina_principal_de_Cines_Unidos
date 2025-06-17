@@ -17,6 +17,10 @@ a {
   color: #ffffff;
 }
 
+button {
+  cursor: pointer;
+}
+
 /*Responsive */
 @media only screen and (max-width: 600px) {
   .responsive {
@@ -365,7 +369,7 @@ section p {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
   flex-direction: column;
   border: solid 1px #353942;
   border-radius: 12px;
@@ -373,15 +377,40 @@ section p {
 }
 .box h2 {
   color: none;
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 0;
-  line-height: 40px;
+  line-height: 36px;
 }
 .box h3 {
   color: #ffffff;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   line-height: 28px;
+}
+.box p {
+  color: #d1d5db;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.box span {
+  color: #ffd900;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 28px;
+}
+.box button {
+  border: none;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: normal;
+  align-self: center;
+  padding: 8px 0;
+  margin-top: 8px;
+  background-color: #ff0000;
+  width: 100%;
 }
 .box div {
   display: flex;
@@ -440,9 +469,16 @@ section p {
     grid-template-columns: repeat(2, 1fr);
     grid-template-columns: 2;
   }
+  .grid-de-tres {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 3;
+  }
 }
 @media only screen and (min-width: 1100px) {
-  #experiencia .div-boxes {
+  .grid-de-cuatro .div-boxes {
     display: grid;
     align-items: center;
     justify-content: center;
@@ -656,6 +692,10 @@ section p {
     height: 70vh;
   }
 }
+.oportunidades-comerciales .div-boxes .box {
+  align-content: flex-start;
+}
+
 footer {
   border-top: solid 1px #8b3232;
   /*Responsive */
