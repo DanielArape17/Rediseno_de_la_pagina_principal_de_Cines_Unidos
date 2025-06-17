@@ -283,6 +283,7 @@ section p {
 }
 
 .pelicula-cartelera {
+  flex: 0 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -291,6 +292,7 @@ section p {
   border: solid 1px #353942;
   border-radius: 12px;
   width: 256px;
+  min-width: 220px;
   transition: all 0.6s ease-in;
   flex-wrap: nowrap;
 }
@@ -388,21 +390,6 @@ section p {
   background-position: 150% 100%;
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up)  */
-@media only screen and (max-width: 600px) {
-  .pelicula-cartelera {
-    width: 205px;
-  }
-  .poster {
-    border: none;
-    border-radius: 12px;
-    background-size: contain;
-    height: 300px;
-  }
-  .descripcion-pelicula {
-    display: none;
-  }
-}
 .experiencia button {
   border: none;
   border-radius: 6px;
