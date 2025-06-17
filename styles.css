@@ -10,7 +10,6 @@ body {
   background: linear-gradient(135deg, #1a1a2e, #000000);
   color: #ffffff;
   font-family: "Roboto", sans-serif;
-  overflow-x: hidden;
 }
 
 a {
@@ -51,9 +50,10 @@ button {
 .carousel {
   display: flex;
   gap: 20px;
-  overflow-x: auto;
+  overflow-x: scroll;
   scrollbar-width: none;
-  padding: 12px;
+  width: 95%;
+  padding: 30px 15px;
 }
 
 .carousel::-webkit-scrollbar {
@@ -277,7 +277,8 @@ section p {
 }
 
 .cartelera {
-  align-items: flex-start;
+  align-items: none;
+  justify-content: none;
   text-align: center;
 }
 
@@ -397,6 +398,9 @@ section p {
     border-radius: 12px;
     background-size: contain;
     height: 300px;
+  }
+  .descripcion-pelicula {
+    display: none;
   }
 }
 .experiencia button {
