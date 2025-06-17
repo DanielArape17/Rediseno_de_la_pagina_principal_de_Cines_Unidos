@@ -1,3 +1,7 @@
+.cartelera
+  align-items: flex-start
+  text-align: center
+
 .pelicula-cartelera
   @include flex(center, center, 0, column)
   @include bordes
@@ -5,18 +9,38 @@
   transition: all 0.6s ease-in
   flex-wrap: nowrap
 
-.poster
-  @include flex(end, flex-start, 0, column)
-  @include bordes(none, 12px 12px 0 0)
-  height: 350px
-  background-image: url("http://www.impawards.com/2025/posters/ballerina_ver2.jpg")
-  background-size: cover
-  background-repeat: no-repeat
-  padding: 0 0 2px 6px 
-  h3
-    font-size: 28px
-  p
-    font-size: 14px
+  .poster
+    @include flex(end, flex-start, 0, column)
+    @include bordes(none, 12px 12px 0 0)
+    height: 350px
+    background-size: cover
+    background-repeat: no-repeat
+    padding: 0 0 2px 6px 
+    h3
+      font-size: 28px
+      text-align: left
+    p
+      font-size: 14px
+      
+  
+.pelicula-cartelera:nth-child(1)
+  .poster
+    background-image: url("http://www.impawards.com/2025/posters/ballerina_ver2.jpg")
+.pelicula-cartelera:nth-child(2)
+  .poster
+    background-image: url("https://m.media-amazon.com/images/M/MV5BY2E5YjE2YTQtZGIxYi00YTU4LTk3YzItYmMyZTM3M2I5ZTM3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg")
+.pelicula-cartelera:nth-child(3)
+  .poster
+    background-image: url("https://diamondfilms.com/img/poster/67d1cd737f8c552719b436371.jpg")
+.pelicula-cartelera:nth-child(4)
+  .poster
+    background-image: url("https://noticiasdeaqui.co/wp-content/uploads/2024/11/img_8539-1.jpg?w=720")
+.pelicula-cartelera:nth-child(5)
+  .poster
+    background-image: url("https://m.media-amazon.com/images/M/MV5BMTlmNDRiZjgtNmYxNi00NTc3LWFlNzEtNzE0ZGQ1ODdlMDQ5XkEyXkFqcGc@._V1_.jpg")
+
+.pelicula-cartelera:hover
+  transform: scale(1.05)
 
 .descripcion-pelicula 
   @include bordes(none, 0 0 12px 12px )
@@ -27,6 +51,7 @@
     p
       @include letras(#d1d5db, 14px)
       padding: 6px 0 0 11px
+      text-align: left
 
     button
       @include bordes(none, 6px)
